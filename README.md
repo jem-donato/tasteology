@@ -35,6 +35,9 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Husky
+Husky has been added to project to avoid build failures from getting pushed to repository
+
 ## Netlify
 
 This project is automatically deployed to netlify using CI/CD
