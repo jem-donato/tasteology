@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "next eslint . --ext .js,.jsx,.ts,.tsx",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": ["eslint --fix", "prettier --write", "git add"],
+    "*.ts": ["eslint --fix", "prettier --write", "git add"],
+    "*.tsx": ["eslint --fix", "prettier --write", "git add"]
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -14,6 +20,8 @@
     "@mui/material": "^7.0.2",
     "@mui/styles": "^6.4.8",
     "framer-motion": "^12.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
