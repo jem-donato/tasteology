@@ -25,15 +25,16 @@ export const PhotoDetail = ({ detail, onClick }: PhotoDetailProps) => {
           <CardActionArea>
             <CardMedia
               component="img"
-              // height="140"
               image={detail.link}
               alt={`photodetail-${detail.title}`}
             />
           </CardActionArea>
         </Card>
       </Grow>
-      <Typography className="title">{detail.title}</Typography>
-      <Typography className="description">{detail.description}</Typography>
+      <Typography className="title-detail">{detail.title}</Typography>
+      <Typography className="description-details">
+        {detail.description}
+      </Typography>
     </div>
   );
 };

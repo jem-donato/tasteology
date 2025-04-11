@@ -8,45 +8,26 @@ import { PhotoModal } from "./PhotoModal";
 import { TasteOfColorsContent } from "@/types/TasteOfColorsContent";
 import { PhotoDetail } from "./PhotoDetail";
 import { useStyles } from "./TasteColors.styles";
+import { PhotoDetails } from "@/types/PhotoDetails";
 
 interface TasteColorsProps {
   content?: TasteOfColorsContent;
+  onClick: (photoDetails: PhotoDetails) => void;
 }
 
-interface PhotoDetails {
-  photo: string;
-  photoAlt: string;
-}
-
-export const TasteColors = ({ content }: TasteColorsProps) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+export const TasteColors = ({ content, onClick }: TasteColorsProps) => {
   const classes = useStyles();
-  const [photoDetails, setPhotoDetails] = useState<PhotoDetails | null>(null);
 
-  const onClickCardHandler = (photo: string, photoAlt: string) => {
-    setPhotoDetails({ photo, photoAlt });
-    setIsModalOpen((isModalOpen) => !isModalOpen);
+  const onClickHandler = (photo: string, photoAlt: string) => {
+    onClick({ photo, photoAlt });
   };
-
-  const onClickModalHandler = () => {
-    setIsModalOpen((isModalOpen) => !isModalOpen);
-  };
-
   return (
     <Box className={classes.tasteColors}>
-      <Typography variant="h5">{content?.title}</Typography>
+      <Typography className="title">{content?.title}</Typography>
       <Box className="divider">
         <Divider aria-hidden="true" />
       </Box>
 
-      {isModalOpen && (
-        <PhotoModal
-          isOpen={isModalOpen}
-          photoAlt={photoDetails?.photoAlt ?? ""}
-          photo={photoDetails?.photo ?? ""}
-          onClick={onClickModalHandler}
-        />
-      )}
       <Grid container spacing={1}>
         {(content?.colorDetails || []).map((detail, index) => {
           return (
@@ -54,7 +35,7 @@ export const TasteColors = ({ content }: TasteColorsProps) => {
               <PhotoDetail
                 key={`photodetail-${index}`}
                 detail={detail}
-                onClick={onClickCardHandler}
+                onClick={onClickHandler}
               />
             </Grid>
           );

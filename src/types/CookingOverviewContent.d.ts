@@ -3,4 +3,5 @@ export interface CookingOverviewContent {
   description: string;
   subtitle: string;
   subdescription: string;
+  photo: Photo[];
 }
