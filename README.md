@@ -26,7 +26,7 @@ ReactJS, Material UI, Next.js, Husky, Eslint, Prettier, Netlify
 Used mock json to mimick calling CMS apis to the application
 
 ## Husky
-Husky has been added to project to avoid build failures from getting pushed to repository
+Husky has been added to the project to avoid build failures from getting pushed to the repository
 
 ## Netlify
 
