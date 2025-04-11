@@ -9,7 +9,7 @@ npm install
 yarn install
 ```
 
-First, run the development server:
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -20,7 +20,7 @@ yarn next dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Technology used
-ReactJS, Material UI, Next.js, Husky, Eslint, Prettier
+ReactJS, Material UI, Next.js, Husky, Eslint, Prettier, Netlify
 
 ## CMS
 Used mock json to mimick calling CMS apis to the application
