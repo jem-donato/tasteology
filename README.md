@@ -30,6 +30,6 @@ Husky has been added to the project to avoid build failures from getting pushed 
 
 ## Netlify
 
-This project is automatically deployed to netlify using CI/CD
-page can be accessed through this link: https://tasteology-jem.netlify.app/
+This project is automatically deployed to netlify via CI/CD.
+This page can be accessed through this link: https://tasteology-jem.netlify.app/
 
