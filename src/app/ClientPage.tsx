@@ -7,6 +7,7 @@ import { useCookingOverview } from "@/hooks/useCookingOverview";
 import { CookingOverview } from "@/components/CookingOverview";
 import { PhotoDetails } from "@/types/PhotoDetails";
 import { PhotoModal } from "@/components/PhotoModal";
+import { LoadingScreen } from "@/components/LoadingScreen";
 
 export const ClientPage = () => {
   const { content: tasteOfColorsContent, loading: tasteOfColorsLoading } =
@@ -29,7 +30,9 @@ export const ClientPage = () => {
   const onClickModalHandler = () => {
     setIsModalOpen((isModalOpen) => !isModalOpen);
   };
-  return (
+  return cookingOverviewContentLoading || tasteOfColorsLoading ? (
+    <LoadingScreen />
+  ) : (
     <Container maxWidth="lg">
       {isModalOpen && (
         <PhotoModal

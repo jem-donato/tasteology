@@ -1,6 +1,23 @@
 {
-    "title": "WHAT DOES COOKING MEAN?",
-    "description": "Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...",
-    "subtitle": "THE PERFECT EGG",
-    "subdescription": "Keep water between 67 and 68°C for a flavourful, tender yolk"
+  "title": "WHAT DOES COOKING MEAN?",
+  "description": "Is it simply applying heat to a food product? A way of making certain food safe to eat? Or a way to create flavour and make food more appealing? This is just part of what Hervé This, the father of molecular gastronomy, has dedicated his life to finding out. We spoke to him to find out what his experiments have told him. And in the process even discovered the secret to cooking the perfect egg...",
+  "subtitle": "THE PERFECT EGG",
+  "subdescription": "Keep water between 67 and 68°C for a flavourful, tender yolk",
+  "photo": [
+    {
+      "link": "pot.png",
+      "rows": 6,
+      "cols": 2
+    },
+    {
+      "link": "chef.png",
+      "rows": 3,
+      "cols": 2
+    },
+    {
+      "link": "egg.png",
+      "rows": 3,
+      "cols": 2
+    }
+  ]
 }
