@@ -13,9 +13,24 @@ interface TasteColorsProps {
   content?: TasteOfColorsContent;
 }
 
+interface PhotoDetails {
+  photo: string;
+  photoAlt: string;
+}
+
 export const TasteColors = ({ content }: TasteColorsProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const classes = useStyles();
+  const [photoDetails, setPhotoDetails] = useState<PhotoDetails | null>(null);
+
+  const onClickCardHandler = (photo: string, photoAlt: string) => {
+    setPhotoDetails({ photo, photoAlt });
+    setIsModalOpen((isModalOpen) => !isModalOpen);
+  };
+
+  const onClickModalHandler = () => {
+    setIsModalOpen((isModalOpen) => !isModalOpen);
+  };
 
   return (
     <Box className={classes.tasteColors}>
@@ -24,12 +39,23 @@ export const TasteColors = ({ content }: TasteColorsProps) => {
         <Divider aria-hidden="true" />
       </Box>
 
-      {isModalOpen && <PhotoModal isOpen={isModalOpen} onClick={() => {}} />}
+      {isModalOpen && (
+        <PhotoModal
+          isOpen={isModalOpen}
+          photoAlt={photoDetails?.photoAlt ?? ""}
+          photo={photoDetails?.photo ?? ""}
+          onClick={onClickModalHandler}
+        />
+      )}
       <Grid container spacing={1}>
         {(content?.colorDetails || []).map((detail, index) => {
           return (
             <Grid size={{ xs: 12, sm: 4 }} key={`photodetail-${index}`}>
-              <PhotoDetail key={`photodetail-${index}`} detail={detail} />
+              <PhotoDetail
+                key={`photodetail-${index}`}
+                detail={detail}
+                onClick={onClickCardHandler}
+              />
             </Grid>
           );
         })}
