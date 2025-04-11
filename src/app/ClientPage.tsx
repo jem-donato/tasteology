@@ -25,6 +25,7 @@ export const ClientPage = () => {
     const { photo, photoAlt } = photoDetail;
     setPhotoDetails({ photo, photoAlt });
     setIsModalOpen((isModalOpen) => !isModalOpen);
+    console.log("photo onclick");
   };
 
   const onClickModalHandler = () => {

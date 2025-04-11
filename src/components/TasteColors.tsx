@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Grid from "@mui/material/Grid";
 
-import { PhotoModal } from "./PhotoModal";
 import { TasteOfColorsContent } from "@/types/TasteOfColorsContent";
 import { PhotoDetail } from "./PhotoDetail";
 import { useStyles } from "./TasteColors.styles";

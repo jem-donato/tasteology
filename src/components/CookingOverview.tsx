@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
 
 import { useStyles } from "./CookingOverview.styles";
 import { PhotoItem } from "./PhotoItem";

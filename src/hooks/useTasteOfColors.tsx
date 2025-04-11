@@ -14,7 +14,7 @@ export const useTasteOfColors = () => {
         const data = await fetchTasteOfColorsContent(); // Call the mock API function
         setContent(data);
       } catch (err) {
-        setError("Failed to fetch content");
+        setError(`Failed to fetch content: ${err}`);
       } finally {
         setLoading(false);
       }

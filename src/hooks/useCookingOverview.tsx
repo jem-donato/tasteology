@@ -14,7 +14,7 @@ export const useCookingOverview = () => {
         const data = await fetchCookingOverviewContent(); // Call the mock API function
         setContent(data);
       } catch (err) {
-        setError("Failed to fetch content");
+        setError(`Failed to fetch content: ${err}`);
       } finally {
         setLoading(false);
       }
