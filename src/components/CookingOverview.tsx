@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import ImageList from "@mui/material/ImageList";
-import { motion } from "framer-motion";
 import Fade from "@mui/material/Fade";
 
 import { useStyles } from "./CookingOverview.styles";

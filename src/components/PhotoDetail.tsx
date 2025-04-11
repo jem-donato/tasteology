@@ -1,5 +1,4 @@
 import Typography from "@mui/material/Typography";
-import Grow from "@mui/material/Grow";
 
 import { ColorDetail } from "@/types/TasteOfColorsContent";
 import { useStyles } from "./PhotoDetail.styles";
