@@ -5,7 +5,6 @@ export const useStyles = makeStyles(() => ({
     textAlign: "center",
     paddingTop: "120px",
     paddingBottom: "120px",
-    "& .title": { fontSize: "30px", fontWeight: "300px" },
     "& .divider": {
       paddingTop: "30px",
       paddingBottom: "30px",

@@ -17,7 +17,7 @@ export const PhotoModal = ({
 }: PhotoModalProps) => {
   return (
     <Modal open={isOpen} onClose={onClick}>
-      <Fade in={isOpen}>
+      <Fade in={isOpen} timeout={1000}>
         <Box
           sx={{
             position: "absolute",
